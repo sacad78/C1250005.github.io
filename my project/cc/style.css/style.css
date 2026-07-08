@@ -1,0 +1,405 @@
+/* ===== GLOBAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    color: #003366;
+    line-height: 1.6;
+}
+
+/* ===== HEADER & NAV ===== */
+header {
+    background: linear-gradient(135deg, #003366 0%, #004080 100%);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,51,102,0.3);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+nav {
+    background: #004080;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+nav ul li a:hover {
+    background: #66b3ff;
+    color: #003366;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    min-height: 400px;
+}
+
+main h2 {
+    color: #003366;
+    border-bottom: 3px solid #003366;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+footer {
+    background: linear-gradient(135deg, #003366 0%, #001a33 100%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid #66b3ff;
+}
+
+/* ===== CARDS (Home) ===== */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,51,102,0.15);
+    padding: 25px 20px;
+    width: 280px;
+    text-align: center;
+    border: 2px solid #003366;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #003366, #66b3ff);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(0,51,102,0.3);
+}
+
+.card h3 {
+    color: #003366;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    color: #333;
+    font-size: 0.95rem;
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.gallery-grid img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid #003366;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 8px 25px rgba(0,51,102,0.4);
+    border-color: #66b3ff;
+}
+
+/* ===== TABLE ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+table thead {
+    background: linear-gradient(135deg, #003366, #004080);
+    color: white;
+}
+
+table th {
+    padding: 15px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+table td {
+    padding: 13px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tbody tr:nth-child(even) {
+    background: #e6f2ff;
+}
+
+table tbody tr:hover {
+    background: #b3d9ff;
+    transition: background 0.3s;
+}
+
+table tfoot {
+    background: #004080;
+    color: white;
+    font-weight: bold;
+}
+
+table tfoot td {
+    text-align: center;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+/* ===== FORM ===== */
+form {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+    max-width: 650px;
+    margin: 20px auto;
+    border: 1px solid #d9e6f2;
+}
+
+fieldset {
+    border: 2px solid #003366;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
+    background: #f8fbff;
+}
+
+legend {
+    background: linear-gradient(135deg, #003366, #004080);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,51,102,0.3);
+}
+
+label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+    color: #003366;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #003366;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0,51,102,0.1);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+    transform: scale(1.1);
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 25px;
+    margin: 10px 0;
+    padding: 10px 0;
+}
+
+.radio-group label, .checkbox-group label {
+    display: inline-flex;
+    align-items: center;
+    font-weight: normal;
+    margin: 0;
+    cursor: pointer;
+}
+
+button {
+    background: linear-gradient(135deg, #003366, #004080);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,51,102,0.3);
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #004080, #66b3ff);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,51,102,0.4);
+}
+
+/* ===== HELP & ABOUT ===== */
+.help-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+    border-left: 6px solid #003366;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.help-section:hover {
+    box-shadow: 0 4px 20px rgba(0,51,102,0.1);
+    transform: translateX(5px);
+}
+
+.help-section h3 {
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.help-section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.help-section ul li {
+    margin: 5px 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 8px 30px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .gallery-grid img {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    fieldset {
+        padding: 15px;
+    }
+    
+    main h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .radio-group, .checkbox-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    table th, table td {
+        padding: 8px 10px;
+    }
+}
