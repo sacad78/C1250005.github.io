@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Language Learning Center</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3176/3176366.png">
+</head>
+<body>
+    <header>
+        <h1>🌍 Language Learning Center</h1>
+        <p>Book Your Course Today</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="gallery.html">📸 Gallery</a></li>
+            <li><a href="booking.html">📝 Booking</a></li>
+            <li><a href="help.html">❓ Help</a></li>
+            <li><a href="about.html">👤 About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>📝 Guest Booking Form</h2>
+        <p style="text-align:center; color:#666; margin-bottom:20px;">Fill out the form below to register for a language course. All fields marked with * are required.</p>
+        
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+252 61 234 5678">
+            </fieldset>
+
+            <fieldset>
+                <legend>Course Selection</legend>
+                
+                <label for="course">Select Course *</label>
+                <select id="course" name="course" required>
+                    <option value="">-- Please Select --</option>
+                    <option value="english">English - Beginner</option>
+                    <option value="english-advanced">English - Advanced</option>
+                    <option value="arabic">Arabic - Intermediate</option>
+                    <option value="somali">Somali - All Levels</option>
+                    <option value="business">Business English</option>
+                </select>
+
+                <label>Your Level *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="level" value="beginner" required> Beginner</label>
+                    <label><input type="radio" name="level" value="intermediate"> Intermediate</label>
+                    <label><input type="radio" name="level" value="advanced"> Advanced</label>
+                    <label><input type="radio" name="level" value="fluent"> Fluent</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Schedule Preferences</legend>
+                
+                <label>Preferred Days *</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="days" value="mon"> Monday</label>
+                    <label><input type="checkbox" name="days" value="tue"> Tuesday</label>
+                    <label><input type="checkbox" name="days" value="wed"> Wednesday</label>
+                    <label><input type="checkbox" name="days" value="thu"> Thursday</label>
+                    <label><input type="checkbox" name="days" value="fri"> Friday</label>
+                    <label><input type="checkbox" name="days" value="sat"> Saturday</label>
+                </div>
+
+                <label for="comments">Additional Comments or Requests</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Any special requests, learning goals, or questions?"></textarea>
+            </fieldset>
+
+            <button type="submit">📩 Submit Booking</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Saad Said Araye | C1250095 | Language Learning Center</p>
+    </footer>
+</body>
+</html>
